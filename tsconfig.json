@@ -1,0 +1,23 @@
+{
+  "include": [
+    "src",
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ],
+  "files": [
+    "src/types/express.d.ts",
+  ],
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true, 
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "build",
+    "declaration": true,
+    "isolatedModules": true
+  }
+}
