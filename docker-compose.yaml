@@ -1,0 +1,15 @@
+name: basic-ecommerce
+services:
+  pg:
+    container_name: basic-ecommerce-db
+    image: postgres:16.8-alpine
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_PORT=${DB_PORT}
+    ports:
+      - ${DB_PORT}:5432
+    volumes:
+      - ./.data/postgres:/var/lib/postgresql/data
+    restart: always
